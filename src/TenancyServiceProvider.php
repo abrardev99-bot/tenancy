@@ -31,6 +31,7 @@ class TenancyServiceProvider extends ServiceProvider
             foreach ($this->app['config']['tenancy.features'] ?? [] as $feature) {
                 $this->app[$feature]->bootstrap($tenancy);
             }
+
             return $tenancy;
         });
 
